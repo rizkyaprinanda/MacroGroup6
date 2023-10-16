@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailProdukActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint"
+            app:layout_constraintVertical_bias="0.03"
+            app:srcCompat="@drawable/sidebar" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint"
+            app:layout_constraintVertical_bias="0.03"
+            app:srcCompat="@drawable/arrowleft_green" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="500dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint"
+            app:layout_constraintVertical_bias="0.049"
+            app:srcCompat="@drawable/detail_rendang" />
+
+        <TextView
+            android:id="@+id/tvNamaProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="52dp"
+            android:text="Rendang Daging"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/tvBeratProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="20dp"
+            android:text="350g"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.988"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <LinearLayout
+            android:id="@+id/linearbox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="#D4F7DF"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamaProduk">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <TableRow android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Protein"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kalori"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lemak"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Karbo"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Zat Besi"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Vit A"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="35g"
+                        android:textColor="#075F5C"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="700kkal"
+                        android:textColor="#075F5C"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="55g"
+                        android:textColor="#075F5C"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="5g"
+                        android:textColor="#075F5C"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="6mg"
+                        android:textColor="#075F5C"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.2mg"
+                        android:textColor="#075F5C"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                </TableRow>
+                <TableRow android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="70%"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="35%"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="85%"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2%"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="33%"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="22%"
+                        android:textColor="#075F5C"
+                        android:gravity="center"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTitleDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Detail Produk"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearbox1" />
+
+        <TextView
+            android:id="@+id/tvDetailProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Daging rendang adalah hidangan tradisional Indonesia yang terkenal. Daging sapi dimasak dalam campuran rempah-rempah yang kaya, seperti serai, cabai, bawang, dan santan kelapa. Proses memasak yang panjang dan pelan memastikan daging empuk."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleDetail" />
+
+        <TextView
+            android:id="@+id/tvBacaLagi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="0dp"
+            android:textColor="#91C789"
+            android:text="Baca Lagi..."
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailProduk" />
+
+        <TextView
+            android:id="@+id/tvTitleBahan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Bahan-bahan"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBacaLagi" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleBahan" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
