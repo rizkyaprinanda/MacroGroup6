@@ -3,4 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#91C789</color>
+    <color name="primary">#91C789</color>
+    <color name="secondary">#D4F7DF</color>
+    <color name="card_text">#B6C9C8</color>
+    <color name="mahasiswa">#FE9843</color>
+    <color name="pasangan_muda">#F6D3E9</color>
+    <color name="keluarga_kecil">#F9F6B3</color>
+    <color name="keluarga_besar">#BDE0FE</color>
+    <color name="sub_info">#075F5C</color>
 </resources>
