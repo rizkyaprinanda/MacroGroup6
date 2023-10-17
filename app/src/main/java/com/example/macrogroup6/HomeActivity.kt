@@ -1,6 +1,8 @@
 package com.example.macrogroup6
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.macrogroup6.databinding.ActivityHomeBinding
@@ -10,7 +12,7 @@ private lateinit var binding: ActivityHomeBinding
 private lateinit var adapter: KategoriAdapter
 
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -19,6 +21,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.sidebar.setOnClickListener{ replaceFragment(sidebar()) }
+        binding.frameLayout2.setOnClickListener(this)
+        binding.btnHome.setOnClickListener(this)
+        binding.btnChild.setOnClickListener(this)
+        binding.btnInformation.setOnClickListener(this)
+        binding.btnCategory.setOnClickListener(this)
+
 
         init()
         setAdapterView()
@@ -60,5 +68,21 @@ class HomeActivity : AppCompatActivity() {
         R.drawable.kategori7,
         R.drawable.kategori8
     )
+
+    override fun onClick(v: View) {
+        when(v.id) {
+            R.id.frameLayout2 -> {
+                val intent = Intent(this@HomeActivity, ProfilAnakActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.btn_child -> {
+                val intent = Intent(this@HomeActivity, ProfilAnakActivity::class.java)
+                startActivity(intent)
+            }
+
+
+        }
+    }
 
 }
