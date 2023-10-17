@@ -1,7 +1,7 @@
 package com.example.macrogroup6
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class Informasi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

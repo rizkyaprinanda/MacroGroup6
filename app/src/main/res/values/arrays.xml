@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="data">
+        <item>Sayuran</item>
+        <item>Buah</item>
+        <item>Daging</item>
+        <item>Ayam</item>
+        <item>Telur</item>
+        <item>Seafood</item>
+        <item>Minuman</item>
+        <item>Snack</item>
+    </string-array>
+
+</resources>
