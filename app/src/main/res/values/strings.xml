@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MacroGroup6</string>
+    <string name="minuman">Minuman</string>
+    <string name="hidangan_laut">Hidangan Laut</string>
+    <string name="ayam">Ayam</string>
+    <string name="telur">Telur</string>
+    <string name="semua_kategori">Semua Kategori</string>
+    <string name="cari_promo_informasi_atau_produk">Cari Promo, informasi, atau produk</string>
+    <string name="sayuran">Sayuran</string>
+    <string name="daging">Daging</string>
+    <string name="buah">Buah</string>
+    <string name="menu_masakan_hari_ini">menu masakan hari ini</string>
+    <string name="makanan_ringan">Makanan Ringan</string>
 </resources>

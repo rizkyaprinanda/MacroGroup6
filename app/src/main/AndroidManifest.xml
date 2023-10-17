@@ -13,7 +13,20 @@
         android:theme="@style/Theme.MacroGroup6"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".ChatBotActivity"
+=======
+            android:name=".Category.SubCategory.Sayuran"
+            android:exported="false" />
+        <activity
+            android:name=".Category.CategoryPage"
+            android:exported="false" />
+        <activity
+            android:name=".Category.CategoryAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Informasi"
+>>>>>>> master
             android:exported="false" />
         <activity
             android:name=".DetailProdukActivity"
