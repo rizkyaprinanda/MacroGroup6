@@ -3,7 +3,7 @@ package com.example.macrogroup6
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projectmakro.databinding.KategoriListBinding
+import com.example.macrogroup6.databinding.KategoriListBinding
 
 class KategoriAdapter(private val list: List<kategoriModel>) : RecyclerView.Adapter<KategoriAdapter.ViewHolder>() {
     class ViewHolder(val binding : KategoriListBinding) : RecyclerView.ViewHolder(binding.root)

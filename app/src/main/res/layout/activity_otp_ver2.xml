@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".otpVer2">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="300dp"
+        android:layout_height="288dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/otpver2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enter your New Password"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/newpass"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="@drawable/edit_text"
+        android:hint="Enter your Pasword"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/confirmnewpass"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="@drawable/edit_text"
+        android:hint="Confrim New Password"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newpass" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#91C789"
+        android:text="Next"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmnewpass"
+        app:layout_constraintVertical_bias="0.100" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

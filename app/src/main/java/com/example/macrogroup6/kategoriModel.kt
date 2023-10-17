@@ -1,4 +1,4 @@
-package com.example.projectmakro
+package com.example.macrogroup6
 
 data class kategoriModel(
     var image: Int,

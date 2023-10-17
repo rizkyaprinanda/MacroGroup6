@@ -13,13 +13,25 @@
         android:theme="@style/Theme.MacroGroup6"
         tools:targetApi="31">
         <activity
+            android:name=".otpVer2"
+            android:exported="false" />
+        <activity
+            android:name=".otpVer"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".Start"
+            android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".DetailProdukActivity"
@@ -37,7 +49,7 @@
             android:name=".PertumbuhanAnakActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".Start"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
