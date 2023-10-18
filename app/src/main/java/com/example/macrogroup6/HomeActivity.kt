@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.macrogroup6.databinding.ActivityHalamanInformasiBinding
+import com.example.macrogroup6.Category.Buah.CategoryPage
 import com.example.macrogroup6.databinding.ActivityHomeBinding
 
 
@@ -84,6 +84,10 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_information->{
                 val intent = Intent(this@HomeActivity, halamanInformasi::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_category->{
+                val intent = Intent(this@HomeActivity, CategoryPage::class.java)
                 startActivity(intent)
             }
 

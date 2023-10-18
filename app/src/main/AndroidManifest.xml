@@ -46,7 +46,7 @@
             android:name=".Category.Sayuran.SayuranCardItem"
             android:exported="false" />
         <activity
-            android:name=".Category.CategoryPage"
+            android:name=".Category.Buah.CategoryPage"
             android:exported="false" />
         <activity
             android:name=".Adapter.CategoryAdapter"

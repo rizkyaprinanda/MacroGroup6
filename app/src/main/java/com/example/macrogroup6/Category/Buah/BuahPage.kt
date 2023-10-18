@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.BuahCategoryAdapter
-import com.example.macrogroup6.Category.CategoryPage
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.R
 

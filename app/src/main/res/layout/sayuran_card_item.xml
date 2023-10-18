@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="165dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp"
+    android:background="@drawable/item_background"> <!-- Menggunakan drawable background -->
+
+    <ImageView
+        android:id="@+id/imgSayuran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sayur_asem" />
+
+    <TextView
+        android:id="@+id/txtNamaSayuran"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="nama sayuran"
+        android:background="#91C789"
+        android:textColor="@android:color/white" />
+
+</androidx.cardview.widget.CardView>

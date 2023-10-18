@@ -1,14 +1,14 @@
 package com.example.macrogroup6.Category.Sayuran
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.SubCategoryAdapter
-import com.example.macrogroup6.Category.CategoryPage
+import com.example.macrogroup6.Category.Buah.CategoryPage
 import com.example.macrogroup6.R
 
 class SayuranPage : AppCompatActivity() {
@@ -17,7 +17,7 @@ class SayuranPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sayuran_page)
+        setContentView(R.layout.activity_category_page)
 
         val textViewSemuaKategori = findViewById<TextView>(R.id.txt_semua_kategori)
 
@@ -31,7 +31,7 @@ class SayuranPage : AppCompatActivity() {
             // Tambahkan item lainnya
         )
 
-        recyclerView = findViewById(R.id.recyclerViewSayuran)
+        recyclerView = findViewById(R.id.categoryRecyclerView)
         subCategoryAdapter = SubCategoryAdapter(this, sayuranList)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -40,7 +40,7 @@ class SayuranPage : AppCompatActivity() {
 
         val sortedSayuranList = sayuranList.sortedBy { it.gambarResId } // Sesuaikan dengan atribut indeks yang ada pada SayuranCardItem
 
-        recyclerView = findViewById(R.id.recyclerViewSayuran)
+        recyclerView = findViewById(R.id.categoryRecyclerView)
         subCategoryAdapter = SubCategoryAdapter(this, sortedSayuranList)
 
         recyclerView.layoutManager = GridLayoutManager(this, 2) // 2 kolom sesuai dengan app:spanCount="2"
