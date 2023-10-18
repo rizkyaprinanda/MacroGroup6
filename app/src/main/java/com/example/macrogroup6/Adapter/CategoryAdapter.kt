@@ -16,7 +16,7 @@ class CategoryAdapter(private val categories: List<CategoryModel>) :
         val categoryName: TextView = itemView.findViewById(R.id.categoryName)
         val categoryIcon: ImageView = itemView.findViewById(R.id.categoryIcon)
     }
-
+// tes command
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.category_card_item, parent, false)
         return ViewHolder(view)

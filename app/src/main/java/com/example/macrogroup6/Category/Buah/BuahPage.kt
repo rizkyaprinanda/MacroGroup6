@@ -15,7 +15,7 @@ import com.example.macrogroup6.Category.CategoryPage
 import com.example.macrogroup6.Category.Sayuran.SayuranCardItem
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.R
-
+//tes command
 class BuahPage : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView

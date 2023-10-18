@@ -22,7 +22,7 @@ class SubCategoryAdapter(private val context: Context, private val sayuranList: 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.sayuran_card_item, parent, false)
         return SayuranViewHolder(view)
     }
-
+// tes command
     override fun onBindViewHolder(holder: SayuranViewHolder, position: Int) {
         val sayuran = sayuranList[position]
         holder.imgSayuran.setImageResource(sayuran.gambarResId)
