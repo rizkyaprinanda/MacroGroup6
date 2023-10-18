@@ -1,20 +1,17 @@
 package com.example.macrogroup6.Category.Buah
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.BuahCategoryAdapter
-import com.example.macrogroup6.Adapter.CategoryAdapter
-import com.example.macrogroup6.Adapter.SubCategoryAdapter
-import com.example.macrogroup6.Category.CategoryModel
 import com.example.macrogroup6.Category.CategoryPage
-import com.example.macrogroup6.Category.Sayuran.SayuranCardItem
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.R
+
 //tes command
 class BuahPage : AppCompatActivity() {
 
