@@ -6,7 +6,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.macrogroup6.Category.CategoryPage
-import com.example.macrogroup6.databinding.ActivityHalamanInformasiBinding
 import com.example.macrogroup6.databinding.ActivityHomeBinding
 
 

@@ -14,9 +14,29 @@ import com.example.macrogroup6.R
 class DagingCategoryAdapter(private val context: Context, private val DagingList: List<DagingCardItem>) :
     RecyclerView.Adapter<DagingCategoryAdapter.DagingViewHolder>() {
 
+    private var onItemClickListener: OnItemClickListener? = null
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        onItemClickListener = listener
+    }
+
     inner class DagingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgDaging: ImageView = itemView.findViewById(R.id.imgDaging)
         val txtNamaDaging: TextView = itemView.findViewById(R.id.txtNamaDaging)
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener?.onItemClick(position)
+                }
+            }
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DagingViewHolder {

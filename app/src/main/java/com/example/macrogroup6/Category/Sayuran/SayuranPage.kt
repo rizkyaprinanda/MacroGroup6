@@ -11,6 +11,7 @@ import com.example.macrogroup6.Adapter.SubCategoryAdapter
 import com.example.macrogroup6.Category.Buah.BuahPage
 import com.example.macrogroup6.Category.CategoryPage
 import com.example.macrogroup6.Category.Daging.DagingPage
+import com.example.macrogroup6.DetailProdukActivity
 import com.example.macrogroup6.R
 
 class SayuranPage : AppCompatActivity() {
@@ -43,13 +44,28 @@ class SayuranPage : AppCompatActivity() {
         recyclerView.adapter = subCategoryAdapter
 
 
-        val sortedSayuranList = sayuranList.sortedBy { it.gambarResId } // Sesuaikan dengan atribut indeks yang ada pada SayuranCardItem
+        val sortedSayuranList = sayuranList.sortedBy { it.namaSayuran } // Sesuaikan dengan atribut indeks yang ada pada SayuranCardItem
 
         recyclerView = findViewById(R.id.recyclerViewSayuran)
         subCategoryAdapter = SubCategoryAdapter(this, sortedSayuranList)
 
         recyclerView.layoutManager = GridLayoutManager(this, 2) // 2 kolom sesuai dengan app:spanCount="2"
         recyclerView.adapter = subCategoryAdapter
+
+        subCategoryAdapter.setOnItemClickListener(object : SubCategoryAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                val selectedItem = sayuranList[position] // Dapatkan item yang diklik
+                val intent = Intent(this@SayuranPage, DetailProdukActivity::class.java)
+
+                // Kirim data yang diperlukan ke DetailProductActivity
+                intent.putExtra("judulProduk", selectedItem.namaSayuran)
+                intent.putExtra("gambarProduk", selectedItem.gambarResId)
+
+                startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            }
+        })
+
 
 //        fungsi untuk click kategori di bawah search view
 

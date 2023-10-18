@@ -95,21 +95,6 @@
             android:textSize="16dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/btn_detail"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/button_stroke"
-            android:gravity="center"
-            android:text="Detail Produk"
-            android:textAlignment="center"
-            android:textColor="#0A8F8B"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

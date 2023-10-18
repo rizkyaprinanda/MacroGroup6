@@ -23,8 +23,12 @@ class ProfilAnakActivity : AppCompatActivity(), View.OnClickListener {
         val btn_chatbot : TextView = findViewById(R.id.btn_chatbot)
         btn_chatbot.setOnClickListener(this)
 
-        val btn_detail : TextView = findViewById(R.id.btn_detail)
-        btn_detail.setOnClickListener(this)
+
+        val btn_back : ImageView = findViewById(R.id.leadingNavigationIcon)
+        btn_back.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onClick(v: View) {
@@ -44,10 +48,7 @@ class ProfilAnakActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
 
-            R.id.btn_detail -> {
-                val intent = Intent(this@ProfilAnakActivity, DetailProdukActivity::class.java)
-                startActivity(intent)
-            }
+
         }
     }
 }
