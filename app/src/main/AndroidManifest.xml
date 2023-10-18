@@ -34,6 +34,18 @@
             android:name=".ChatBotActivity"
             android:exported="false" />
         <activity
+            android:name=".Category.Sayuran.SayuranPage"
+            android:exported="false" />
+        <activity
+            android:name=".Category.Sayuran.SayuranCardItem"
+            android:exported="false" />
+        <activity
+            android:name=".Category.CategoryPage"
+            android:exported="false" />
+        <activity
+            android:name=".Adapter.CategoryAdapter"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
