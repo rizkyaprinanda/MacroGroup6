@@ -7,11 +7,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.CategoryAdapter
+<<<<<<< HEAD
 import com.example.macrogroup6.Category.Ayam.AyamPage
 import com.example.macrogroup6.Category.Buah.BuahPage
 import com.example.macrogroup6.Category.Daging.DagingPage
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.Category.Telur.TelurPage
+=======
+import com.example.macrogroup6.Category.Buah.BuahPage
+import com.example.macrogroup6.Category.Sayuran.SayuranPage
+>>>>>>> 01d2f8a43b1b7b6aadff435e626a80e6445ecc40
 import com.example.macrogroup6.R
 
 class CategoryPage : AppCompatActivity() {
@@ -21,9 +26,12 @@ class CategoryPage : AppCompatActivity() {
 
         val textViewSayuran= findViewById<TextView>(R.id.txt_sayuran)
         val textViewBuah= findViewById<TextView>(R.id.txt_buah)
+<<<<<<< HEAD
         val textViewDaging= findViewById<TextView>(R.id.txt_daging)
         val textViewTelur = findViewById<TextView>(R.id.txt_telur)
         val textViewAyam =  findViewById<TextView>(R.id.txt_ayam)
+=======
+>>>>>>> 01d2f8a43b1b7b6aadff435e626a80e6445ecc40
 
         val categories = listOf(
             CategoryModel("Sayuran", R.drawable.vegetables),
@@ -44,11 +52,15 @@ class CategoryPage : AppCompatActivity() {
         textViewSayuran.setOnClickListener{
             val intent = Intent(this, SayuranPage::class.java)
             startActivity(intent)
+<<<<<<< HEAD
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+=======
+>>>>>>> 01d2f8a43b1b7b6aadff435e626a80e6445ecc40
         }
         textViewBuah.setOnClickListener{
             val intent = Intent(this, BuahPage::class.java)
             startActivity(intent)
+<<<<<<< HEAD
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         textViewDaging.setOnClickListener{
@@ -65,6 +77,8 @@ class CategoryPage : AppCompatActivity() {
             val intent = Intent(this, AyamPage::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+=======
+>>>>>>> 01d2f8a43b1b7b6aadff435e626a80e6445ecc40
         }
     }
 

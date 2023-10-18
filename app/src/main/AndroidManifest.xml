@@ -16,6 +16,9 @@
             android:name=".Category.Ayam.AyamCardItem"
             android:exported="false" />
         <activity
+            android:name=".videostunting"
+            android:exported="false" />
+        <activity
             android:name=".Category.Ayam.AyamPage"
             android:exported="false" />
         <activity
@@ -25,10 +28,16 @@
             android:name=".Category.Telur.TelurPage"
             android:exported="false" />
         <activity
+            android:name=".DetailProdukActivity"
+            android:exported="false" />
+        <activity
             android:name=".Category.Daging.DagingCardItem"
             android:exported="false" />
         <activity
             android:name=".Category.Daging.DagingPage"
+            android:exported="false" />
+        <activity
+            android:name=".ChatBotActivity"
             android:exported="false" />
         <activity
             android:name=".Category.Buah.BuahCardItem"
@@ -49,12 +58,6 @@
             android:name=".Adapter.CategoryAdapter"
             android:exported="false" />
         <activity
-            android:name=".DetailProdukActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChatBotActivity"
-            android:exported="false" />
-        <activity
             android:name=".ProfilAnakActivity"
             android:exported="false" />
         <activity
@@ -62,9 +65,6 @@
             android:exported="false" />
         <activity
             android:name=".PertumbuhanAnakActivity"
-            android:exported="false" />
-        <activity
-            android:name=".videostunting"
             android:exported="false" />
         <activity
             android:name=".ArtikelStunting"
