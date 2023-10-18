@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.SubCategoryAdapter
 import com.example.macrogroup6.Category.Buah.BuahPage
 import com.example.macrogroup6.Category.CategoryPage
+import com.example.macrogroup6.Category.Daging.DagingPage
 import com.example.macrogroup6.R
 
 class SayuranPage : AppCompatActivity() {
@@ -20,8 +21,10 @@ class SayuranPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sayuran_page)
 
-        val textViewSemuaKategori = findViewById<TextView>(R.id.txt_semua_kategori)
-        val textViewBuah= findViewById<TextView>(R.id.txt_buah)
+        val textViewSemuaKategori = findViewById<TextView>(R.id.tx_semua_kategori)
+        val textViewBuah= findViewById<TextView>(R.id.tx_buah)
+        val textViewDaging= findViewById<TextView>(R.id.tx_daging)
+
 
         val sayuranList = mutableListOf(
             SayuranCardItem("salad tumis", R.drawable.salad_tumis),
@@ -53,10 +56,17 @@ class SayuranPage : AppCompatActivity() {
         textViewSemuaKategori.setOnClickListener{
             val intent = Intent(this, CategoryPage::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         textViewBuah.setOnClickListener{
             val intent = Intent(this, BuahPage::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+        textViewDaging.setOnClickListener{
+            val intent = Intent(this, DagingPage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
     }
 

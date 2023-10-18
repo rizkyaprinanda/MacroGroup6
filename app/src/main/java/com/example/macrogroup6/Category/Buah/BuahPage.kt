@@ -12,10 +12,11 @@ import com.example.macrogroup6.Adapter.CategoryAdapter
 import com.example.macrogroup6.Adapter.SubCategoryAdapter
 import com.example.macrogroup6.Category.CategoryModel
 import com.example.macrogroup6.Category.CategoryPage
+import com.example.macrogroup6.Category.Daging.DagingPage
 import com.example.macrogroup6.Category.Sayuran.SayuranCardItem
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.R
-//tes command
+
 class BuahPage : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
@@ -24,16 +25,17 @@ class BuahPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buah_page)
 
-        val textViewSemuaKategori = findViewById<TextView>(R.id.txt_semua_kategori)
-        val textViewSayuran= findViewById<TextView>(R.id.txt_sayuran)
-        val textViewDaging= findViewById<TextView>(R.id.txt_sayuran)
+        val textViewSemuaKategori = findViewById<TextView>(R.id.t_semua_kategori)
+        val textViewSayuran= findViewById<TextView>(R.id.t_sayuran)
+        val textViewDaging= findViewById<TextView>(R.id.t_daging)
+
 
         val buahList = mutableListOf(
-            BuahCardItem("salad tumis", R.drawable.salad_tumis),
-            BuahCardItem("salad sayur", R.drawable.salad_sayur),
-            BuahCardItem("capcay udang", R.drawable.capcay_udang),
-            BuahCardItem("sayur sop", R.drawable.sayur_sop),
-            BuahCardItem("sayur lodeh", R.drawable.sayur_lodeh),
+            BuahCardItem("smoothie pisanga with bayam", R.drawable.smoothie_pisang),
+            BuahCardItem("smoothie alpukat with blueberry", R.drawable.smoothie_alpukat),
+            BuahCardItem("smoothie bowl", R.drawable.smoothie_bowl),
+            BuahCardItem("buah kering ", R.drawable.buah_kering),
+            BuahCardItem("salad buah", R.drawable.salad_buah),
             BuahCardItem("sayur asem", R.drawable.sayur_asem),
             // Tambahkan item lainnya
         )
@@ -58,10 +60,17 @@ class BuahPage : AppCompatActivity() {
         textViewSemuaKategori.setOnClickListener{
             val intent = Intent(this, CategoryPage::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         textViewSayuran.setOnClickListener{
             val intent = Intent(this, SayuranPage::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+        textViewDaging.setOnClickListener{
+            val intent = Intent(this, DagingPage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
 

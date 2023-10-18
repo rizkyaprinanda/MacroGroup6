@@ -69,7 +69,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txt_semua_kategori"
+                    android:id="@+id/tx_semua_kategori"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/semua_kategori"
@@ -78,7 +78,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_sayuran"
+                    android:id="@+id/tx_sayuran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="12dp"
@@ -87,7 +87,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txt_daging"
+                    android:id="@+id/tx_daging"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/daging"
@@ -96,7 +96,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_buah"
+                    android:id="@+id/tx_buah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/buah"
@@ -105,7 +105,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_telur"
+                    android:id="@+id/tx_telur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/telur"
@@ -114,7 +114,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_ayam"
+                    android:id="@+id/tx_ayam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ayam"
@@ -123,7 +123,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_hidangan_laut"
+                    android:id="@+id/tx_hidangan_laut"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/hidangan_laut"
@@ -132,7 +132,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_minuman"
+                    android:id="@+id/tx_minuman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -141,7 +141,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/txt_makanan_ringan"
+                    android:id="@+id/tx_makanan_ringan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"

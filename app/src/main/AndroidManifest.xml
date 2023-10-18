@@ -13,25 +13,22 @@
         android:theme="@style/Theme.MacroGroup6"
         tools:targetApi="31">
         <activity
-            android:name=".videostunting"
+            android:name=".Category.Ayam.AyamCardItem"
             android:exported="false" />
         <activity
-            android:name=".ArtikelStunting"
+            android:name=".Category.Ayam.AyamPage"
             android:exported="false" />
         <activity
-            android:name=".halamanInformasi"
+            android:name=".Category.Telur.TelurCardItem"
             android:exported="false" />
         <activity
-            android:name=".DetailProdukActivity"
+            android:name=".Category.Telur.TelurPage"
             android:exported="false" />
         <activity
-            android:name=".ForgotPassword"
+            android:name=".Category.Daging.DagingCardItem"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChatBotActivity"
+            android:name=".Category.Daging.DagingPage"
             android:exported="false" />
         <activity
             android:name=".Category.Buah.BuahCardItem"
@@ -52,6 +49,36 @@
             android:name=".Adapter.CategoryAdapter"
             android:exported="false" />
         <activity
+            android:name=".DetailProdukActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatBotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilAnakActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TambahDataAnakActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertumbuhanAnakActivity"
+            android:exported="false" />
+        <activity
+            android:name=".videostunting"
+            android:exported="false" />
+        <activity
+            android:name=".ArtikelStunting"
+            android:exported="false" />
+        <activity
+            android:name=".halamanInformasi"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
@@ -67,19 +94,10 @@
             android:name=".otpVer2"
             android:exported="false" />
         <activity
-            android:name=".PertumbuhanAnakActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfilAnakActivity"
-            android:exported="false" />
-        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".TambahDataAnakActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
