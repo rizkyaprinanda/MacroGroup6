@@ -6,4 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".videostunting">
 
+    <TextView
+        android:id="@+id/backtoprofile"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape"
+        android:text="Video Seputar Stunting"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:drawableLeft="@drawable/arrowleft"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="335dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backtoprofile">
+
+        <TextView
+            android:id="@+id/video"
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape4"
+            android:drawableLeft="@drawable/play"
+            android:gravity="center"
+            android:paddingLeft="45dp"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="180dp"
+            android:layout_marginTop="-180dp"
+            android:text="Mengenal Stunting"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="205dp"
+            android:text="Apa itu stunting? Kenapa anak bisa terkena\nstunting? Bagaimana cara mencegahnya?"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video2"
+        android:layout_width="335dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <TextView
+            android:id="@+id/video1"
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape4"
+            android:drawableLeft="@drawable/play"
+            android:gravity="center"
+            android:paddingLeft="45dp"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="180dp"
+            android:layout_marginTop="-180dp"
+            android:text="Mengenal Stunting"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="205dp"
+            android:text="Apa itu stunting? Kenapa anak bisa terkena\nstunting? Bagaimana cara mencegahnya?"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

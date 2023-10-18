@@ -6,4 +6,194 @@
     android:layout_height="match_parent"
     tools:context=".halamanInformasi">
 
+    <TextView
+        android:id="@+id/backtoprofile"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape"
+        android:text="Informasi Seputar Stunting"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:text="Artikel"
+        android:textColor="#075F5C"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backtoprofile" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="336dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Mengenal Stunting"
+            android:textColor="#075F5C"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="134dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="190dp"
+            android:src="@drawable/apaitustunting" />
+
+        <Button
+            android:id="@+id/btnSelengkapnya"
+            android:layout_width="139dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="#91C789"
+            android:text="Selengkapnya"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="40dp"
+            android:text="Mengenal Stunting,\nPenyebab Hingga\nCara Pencegahannya"
+            android:textColor="#075F5C"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape3"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/baseline_home_2" />
+
+        <ImageView
+            android:id="@+id/btn_child"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:src="@drawable/dataanak2" />
+
+        <ImageView
+            android:id="@+id/btn_information"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:src="@drawable/informasi2" />
+
+        <ImageView
+            android:id="@+id/btn_category"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:src="@drawable/dataanak4" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:text="Video Seputar Stunting"
+        android:textColor="#075F5C"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <TextView
+        android:id="@+id/video"
+        android:layout_width="300dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape4"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:drawableLeft="@drawable/play"
+        android:paddingLeft="45dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Rekomendasi Makanan Untuk Anak\nUsia 0-5 Tahun"
+        android:textColor="#075F5C"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video" />
+
+    <ImageView
+        android:layout_width="118dp"
+        android:layout_height="127dp"
+        android:src="@drawable/sayurasem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <ImageView
+        android:layout_width="118dp"
+        android:layout_height="127dp"
+        android:src="@drawable/telur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

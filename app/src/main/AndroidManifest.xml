@@ -14,6 +14,18 @@
         tools:targetApi="31">
         <activity
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            android:name=".videostunting"
+            android:exported="false" />
+        <activity
+            android:name=".ArtikelStunting"
+            android:exported="false" />
+        <activity
+            android:name=".halamanInformasi"
+            android:exported="false" />
+        <activity
+>>>>>>> 83554a27d5b5e901a05417d33c92ea7f01fd1229
             android:name=".DetailProdukActivity"
             android:exported="false" />
         <activity

@@ -136,7 +136,7 @@
         android:id="@+id/toRegist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="85dp"
+        android:layout_marginBottom="120dp"
         android:text="Register Now"
         android:textColor="#91C789"
         android:textStyle="bold"
