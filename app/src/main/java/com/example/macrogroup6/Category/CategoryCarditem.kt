@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.macrogroup6.R
 
 // tes comment
-// tes comment2
 
 class CategoryCardItem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
