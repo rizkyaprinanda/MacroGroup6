@@ -17,7 +17,7 @@ class BuahCategoryAdapter (private val context: Context, private val BuahList: L
         val imgBuah: ImageView = itemView.findViewById(R.id.imgSayuran)
         val txtNamaBuah: TextView = itemView.findViewById(R.id.txtNamaBuah)
     }
-
+//tes command
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BuahViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_buah_card_item, parent, false)
         return BuahViewHolder(view)

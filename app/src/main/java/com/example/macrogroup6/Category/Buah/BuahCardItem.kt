@@ -10,5 +10,5 @@ import com.example.macrogroup6.R
 //        setContentView(R.layout.activity_buah_card_item)
 //    }
 //}
-
+// tes command
 data class BuahCardItem(val namaBuah: String, val gambarId: Int)

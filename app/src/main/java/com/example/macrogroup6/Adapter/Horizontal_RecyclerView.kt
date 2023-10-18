@@ -23,7 +23,7 @@ class Horizontal_RecyclerView: RecyclerView.Adapter<Horizontal_RecyclerView.MyVi
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         TODO("Not yet implemented")
     }
-
+// tes command
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     }
