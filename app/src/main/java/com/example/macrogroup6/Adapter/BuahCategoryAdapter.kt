@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Category.Buah.BuahCardItem
 import com.example.macrogroup6.R
 
-class BuahCategoryAdapter (private val context: Context, private val sayuranList: List<BuahCardItem>) :
+class BuahCategoryAdapter (private val context: Context, private val BuahList: List<BuahCardItem>) :
     RecyclerView.Adapter<BuahCategoryAdapter.BuahViewHolder>(){
 
     inner class BuahViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,12 +24,12 @@ class BuahCategoryAdapter (private val context: Context, private val sayuranList
     }
 
     override fun onBindViewHolder(holder: BuahViewHolder, position: Int) {
-        val sayuran = sayuranList[position]
-        holder.imgBuah.setImageResource(sayuran.gambarResId)
-        holder.txtNamaBuah.text = sayuran.namaSayuran
+        val buah = BuahList [position]
+        holder.imgBuah.setImageResource(buah.gambarId)
+        holder.txtNamaBuah.text = buah.namaBuah
     }
 
     override fun getItemCount(): Int {
-        return sayuranList.size
+        return BuahList.size
     }
 }

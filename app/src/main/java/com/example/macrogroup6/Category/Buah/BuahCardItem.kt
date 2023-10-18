@@ -11,4 +11,4 @@ import com.example.macrogroup6.R
 //    }
 //}
 
-data class BuahCardItem(val namaSayuran: String, val gambarResId: Int)
+data class BuahCardItem(val namaBuah: String, val gambarId: Int)
