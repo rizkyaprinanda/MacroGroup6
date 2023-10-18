@@ -69,7 +69,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/t_semua_kategori"
+                    android:id="@+id/tv_semua_kategori"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/semua_kategori"
@@ -78,7 +78,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/t_sayuran"
+                    android:id="@+id/tv_sayuran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="12dp"
@@ -87,25 +87,25 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/t_daging"
+                    android:id="@+id/tv_daging"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/daging"
                     android:textStyle="bold"
                     android:padding="12dp"
-                    android:textColor="@color/primary" />
+                    android:textColor="#075F5C" />
 
                 <TextView
-                    android:id="@+id/t_buah"
+                    android:id="@+id/tv_buah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/buah"
                     android:textStyle="bold"
                     android:padding="12dp"
-                    android:textColor="#075F5C" />
+                    android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/t_telur"
+                    android:id="@+id/tv_telur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/telur"
@@ -114,7 +114,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/t_ayam"
+                    android:id="@+id/tv_ayam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ayam"
@@ -123,7 +123,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/t_hidangan_laut"
+                    android:id="@+id/tv_hidangan_laut"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/hidangan_laut"
@@ -132,7 +132,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/t_minuman"
+                    android:id="@+id/tv_minuman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -141,7 +141,7 @@
                     android:textColor="@color/primary" />
 
                 <TextView
-                    android:id="@+id/t_makanan_ringan"
+                    android:id="@+id/tv_makanan_ringan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -153,7 +153,7 @@
         </HorizontalScrollView>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewBuah"
+            android:id="@+id/recyclerViewDaging"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/hrz_searchview"
@@ -171,7 +171,7 @@
             android:id="@+id/txt_menu_hari_ini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/recyclerViewBuah"
+            android:layout_below="@+id/recyclerViewDaging"
             android:text="@string/menu_masakan_hari_ini"
             android:layout_marginStart="20dp"
             android:textSize="20sp"

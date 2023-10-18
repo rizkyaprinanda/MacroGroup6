@@ -1,4 +1,4 @@
-package com.example.macrogroup6.Category.Buah
+package com.example.macrogroup6.Category.Telur
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,52 +8,52 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.BuahCategoryAdapter
-import com.example.macrogroup6.Adapter.CategoryAdapter
-import com.example.macrogroup6.Adapter.SubCategoryAdapter
-import com.example.macrogroup6.Category.CategoryModel
+import com.example.macrogroup6.Adapter.TelurCategoryAdapter
+import com.example.macrogroup6.Category.Buah.BuahCardItem
 import com.example.macrogroup6.Category.CategoryPage
 import com.example.macrogroup6.Category.Daging.DagingPage
-import com.example.macrogroup6.Category.Sayuran.SayuranCardItem
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.R
 
-class BuahPage : AppCompatActivity() {
+class TelurPage : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var buahCategoryAdapter: BuahCategoryAdapter
+    private lateinit var telurCategoryAdapter: TelurCategoryAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_buah_page)
+        setContentView(R.layout.activity_telur_page)
 
-        val textViewSemuaKategori = findViewById<TextView>(R.id.t_semua_kategori)
-        val textViewSayuran= findViewById<TextView>(R.id.t_sayuran)
-        val textViewDaging= findViewById<TextView>(R.id.t_daging)
+        val textViewSemuaKategori = findViewById<TextView>(R.id.teks_semua_kategori)
+        val textViewSayuran= findViewById<TextView>(R.id.teks_sayuran)
+        val textViewDaging= findViewById<TextView>(R.id.teks_daging)
 
 
-        val buahList = mutableListOf(
-            BuahCardItem("smoothie pisanga with bayam", R.drawable.smoothie_pisang),
-            BuahCardItem("smoothie alpukat with blueberry", R.drawable.smoothie_alpukat),
-            BuahCardItem("smoothie bowl", R.drawable.smoothie_bowl),
-            BuahCardItem("buah kering ", R.drawable.buah_kering),
-            BuahCardItem("salad buah", R.drawable.salad_buah),
-            BuahCardItem("sayur asem", R.drawable.sayur_asem),
+
+        val telurList = mutableListOf(
+            TelurCardItem("omelet sayur", R.drawable.omelet_sayur),
+            TelurCardItem("telur rebus", R.drawable.telur_rebus),
+            TelurCardItem("fritatta telur", R.drawable.fritatta_keju),
+            TelurCardItem("telur panggang alpukat ", R.drawable.telur_panggang),
+            TelurCardItem("salad telur", R.drawable.gado_gado),
+            TelurCardItem("telur asin", R.drawable.telur_asin),
             // Tambahkan item lainnya
         )
 
-        recyclerView = findViewById(R.id.recyclerViewBuah)
-        buahCategoryAdapter = BuahCategoryAdapter(this, buahList)
+        recyclerView = findViewById(R.id.recyclerViewTelur)
+        telurCategoryAdapter = TelurCategoryAdapter(this, telurList)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = buahCategoryAdapter
+        recyclerView.adapter = telurCategoryAdapter
 
 
-        val sortedBuahList = buahList.sortedBy { it.gambarId} // Sesuaikan dengan atribut indeks yang ada pada SayuranCardItem
+        val sortedTelurList = telurList.sortedBy { it.gambarTelur} // Sesuaikan dengan atribut indeks yang ada pada SayuranCardItem
 
-        recyclerView = findViewById(R.id.recyclerViewBuah)
-        buahCategoryAdapter = BuahCategoryAdapter(this, sortedBuahList)
+        recyclerView = findViewById(R.id.recyclerViewTelur)
+        telurCategoryAdapter = TelurCategoryAdapter(this, sortedTelurList)
 
         recyclerView.layoutManager = GridLayoutManager(this, 2) // 2 kolom sesuai dengan app:spanCount="2"
-        recyclerView.adapter = buahCategoryAdapter
+        recyclerView.adapter = telurCategoryAdapter
 
 //        fungsi untuk click kategori di bawah search view
 
@@ -72,8 +72,6 @@ class BuahPage : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
-
-
 
     }
 }

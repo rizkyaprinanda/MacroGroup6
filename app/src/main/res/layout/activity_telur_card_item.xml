@@ -10,13 +10,14 @@
     android:background="@drawable/item_background"> <!-- Menggunakan drawable background -->
 
     <ImageView
-        android:id="@+id/imgSayuran"
+        android:id="@+id/imgTelur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/sayur_asem" />
+        android:src="@drawable/salad_buah"
+        android:scaleType="centerCrop"/>
 
     <TextView
-        android:id="@+id/txtNamaSayuran"
+        android:id="@+id/txtNamaTelur"
         android:layout_width="140dp"
         android:layout_height="45dp"
         android:padding="8dp"
