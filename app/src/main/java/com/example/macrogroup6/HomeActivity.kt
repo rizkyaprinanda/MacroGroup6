@@ -29,11 +29,21 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnInformation.setOnClickListener(this)
         binding.btnCategory.setOnClickListener(this)
 
+        binding.imgRendang.setOnClickListener { startDetailProdukActivity() }
+        binding.imgSop.setOnClickListener { startDetailProdukActivity() }
+        binding.imgParfait.setOnClickListener { startDetailProdukActivity() }
+        binding.imgAyam.setOnClickListener { startDetailProdukActivity() }
+
 
 
         init()
         setAdapterView()
 
+    }
+
+    private fun startDetailProdukActivity() {
+        val intent = Intent(this@HomeActivity, DetailProdukActivity::class.java)
+        startActivity(intent)
     }
 
     private fun replaceFragment(fragment1: sidebar) {

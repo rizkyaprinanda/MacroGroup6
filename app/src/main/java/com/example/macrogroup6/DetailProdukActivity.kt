@@ -16,11 +16,6 @@ class DetailProdukActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_produk)
 
-        recyclerView = findViewById(R.id.rvBahan)
-        adapter = Horizontal_RecyclerView()
-
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.adapter = adapter
 
 
     }

@@ -139,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/img_rendang"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/rendang"
@@ -149,18 +149,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/img_sop"
         android:layout_width="145dp"
         android:layout_marginTop="5dp"
         android:layout_height="145dp"
         android:src="@drawable/sayursop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+        app:layout_constraintStart_toEndOf="@+id/img_rendang"
+        app:layout_constraintTop_toTopOf="@+id/img_rendang" />
 
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/img_parfait"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="12dp"
@@ -168,9 +168,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/img_rendang" />
 
     <ImageView
+        android:id="@+id/img_ayam"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="12dp"
@@ -178,8 +179,8 @@
         android:src="@drawable/ayampangganglemon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.688"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintStart_toEndOf="@+id/img_parfait"
+        app:layout_constraintTop_toBottomOf="@+id/img_sop" />
 
     <RelativeLayout
         android:id="@+id/rsidebar"
