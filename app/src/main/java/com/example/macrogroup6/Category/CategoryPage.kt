@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.CategoryAdapter
+import com.example.macrogroup6.Category.Buah.BuahPage
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
 import com.example.macrogroup6.R
 
@@ -16,6 +17,7 @@ class CategoryPage : AppCompatActivity() {
         setContentView(R.layout.activity_category_page)
 
         val textViewSayuran= findViewById<TextView>(R.id.txt_sayuran)
+        val textViewBuah= findViewById<TextView>(R.id.txt_buah)
 
         val categories = listOf(
             CategoryModel("Sayuran", R.drawable.vegetables),
@@ -35,6 +37,10 @@ class CategoryPage : AppCompatActivity() {
 
         textViewSayuran.setOnClickListener{
             val intent = Intent(this, SayuranPage::class.java)
+            startActivity(intent)
+        }
+        textViewBuah.setOnClickListener{
+            val intent = Intent(this, BuahPage::class.java)
             startActivity(intent)
         }
     }
