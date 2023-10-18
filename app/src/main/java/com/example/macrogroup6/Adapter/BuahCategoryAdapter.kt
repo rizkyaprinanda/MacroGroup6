@@ -14,7 +14,7 @@ class BuahCategoryAdapter (private val context: Context, private val BuahList: L
     RecyclerView.Adapter<BuahCategoryAdapter.BuahViewHolder>(){
 
     inner class BuahViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgBuah: ImageView = itemView.findViewById(R.id.imgSayuran)
+        val imgBuah: ImageView = itemView.findViewById(R.id.imgBuah)
         val txtNamaBuah: TextView = itemView.findViewById(R.id.txtNamaBuah)
     }
 //tes command

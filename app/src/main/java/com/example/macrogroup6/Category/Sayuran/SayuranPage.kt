@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.SubCategoryAdapter
+import com.example.macrogroup6.Category.Buah.BuahPage
 import com.example.macrogroup6.Category.CategoryPage
 import com.example.macrogroup6.R
 
@@ -20,6 +21,7 @@ class SayuranPage : AppCompatActivity() {
         setContentView(R.layout.sayuran_page)
 
         val textViewSemuaKategori = findViewById<TextView>(R.id.txt_semua_kategori)
+        val textViewBuah= findViewById<TextView>(R.id.txt_buah)
 
         val sayuranList = mutableListOf(
             SayuranCardItem("salad tumis", R.drawable.salad_tumis),
@@ -50,6 +52,10 @@ class SayuranPage : AppCompatActivity() {
 
         textViewSemuaKategori.setOnClickListener{
             val intent = Intent(this, CategoryPage::class.java)
+            startActivity(intent)
+        }
+        textViewBuah.setOnClickListener{
+            val intent = Intent(this, BuahPage::class.java)
             startActivity(intent)
         }
     }
