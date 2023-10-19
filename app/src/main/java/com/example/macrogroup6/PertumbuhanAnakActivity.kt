@@ -1,12 +1,11 @@
 package com.example.macrogroup6
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class PertumbuhanAnakActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -14,6 +13,8 @@ class PertumbuhanAnakActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var etTinggi : TextView
     private lateinit var etBerat : TextView
     private lateinit var etLingkar : TextView
+    private lateinit var btnUpdate : TextView
+    private lateinit var tanggal : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +24,20 @@ class PertumbuhanAnakActivity : AppCompatActivity(), View.OnClickListener {
         etBerat = findViewById(R.id.tvkg)
         etTinggi = findViewById(R.id.tvcm)
         etLingkar = findViewById(R.id.tvcm2)
+        btnUpdate = findViewById(R.id.btn_updatedata)
+        tanggal = findViewById(R.id.tanggal)
+
+        btnUpdate.setOnClickListener(this)
 
         val bundle = intent.extras
         if(bundle != null) {
             val nama = bundle.getString("nama") ?: ""
             val usia = bundle.getString("usia") ?: ""
+            val date = bundle.getString("tanggal")?: ""
             etTinggi.setText(bundle.getString("tinggi"))
             etBerat.setText(bundle.getString("berat"))
             etLingkar.setText(bundle.getString("lingkar"))
-
+            tanggal.text = date
             etNama.text = "$nama - $usia"
 
         }
@@ -44,6 +50,10 @@ class PertumbuhanAnakActivity : AppCompatActivity(), View.OnClickListener {
         when (v.id) {
             R.id.leadingNavigationIcon -> {
                 val intent = Intent(this@PertumbuhanAnakActivity, ProfilAnakActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_updatedata->{
+                val intent = Intent(this@PertumbuhanAnakActivity, UpdateDataAnakActivity::class.java)
                 startActivity(intent)
             }
         }

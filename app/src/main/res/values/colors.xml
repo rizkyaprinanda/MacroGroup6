@@ -11,4 +11,6 @@
     <color name="keluarga_kecil">#F9F6B3</color>
     <color name="keluarga_besar">#BDE0FE</color>
     <color name="sub_info">#075F5C</color>
+    <color name="detail_resep">#3E5481</color>
+    <color name="grey">#9FA5C0</color>
 </resources>

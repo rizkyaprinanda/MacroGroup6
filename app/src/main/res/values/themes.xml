@@ -7,6 +7,9 @@
 
     <style name="Theme.MacroGroup6" parent="Base.Theme.MacroGroup6" />
 
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#91C789</item>
+    </style>
 
 
 </resources>

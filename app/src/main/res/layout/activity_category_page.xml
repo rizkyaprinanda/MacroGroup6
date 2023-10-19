@@ -1,446 +1,469 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!--<ScrollView-->
+<!--    -->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
 
-    <RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".Category.CategoryPage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <!-- Search View -->
-        <LinearLayout
-            android:id="@+id/searchView"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/searchview_outline"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="8dp">
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/ic_search"
-                app:tint="#91C789" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
-                android:hint="@string/cari_promo_informasi_atau_produk"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </LinearLayout>
-
-        <!-- Kategori Tabs -->
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/searchView">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_menu"
-                app:tint="@color/black" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <HorizontalScrollView
-            android:id="@+id/hrz_searchview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/searchView">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txt_semua_kategori"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/semua_kategori"
-                    android:textStyle="bold"
-                    android:padding="12dp"
-                    android:textColor="#075F5C" />
-
-                <TextView
-                    android:id="@+id/txt_sayuran"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:text="@string/sayuran"
-                    android:textColor="@color/primary"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_daging"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/daging"
-                    android:textStyle="bold"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-                <TextView
-                    android:id="@+id/txt_buah"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/buah"
-                    android:textStyle="bold"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-                <TextView
-                    android:id="@+id/txt_telur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/telur"
-                    android:textStyle="bold"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-                <TextView
-                    android:id="@+id/txt_ayam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ayam"
-                    android:textStyle="bold"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-                <TextView
-                    android:id="@+id/txt_hidangan_laut"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hidangan_laut"
-                    android:textStyle="bold"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-                <TextView
-                    android:id="@+id/txt_minuman"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="@string/minuman"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-                <TextView
-                    android:id="@+id/txt_makanan_ringan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="@string/makanan_ringan"
-                    android:padding="12dp"
-                    android:textColor="@color/primary" />
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/categoryRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/hrz_searchview"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="3"
-            tools:listitem="@layout/category_card_item" />
-
-        <TextView
-            android:id="@+id/txt_menu_hari_ini"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/categoryRecyclerView"
-            android:text="@string/menu_masakan_hari_ini"
-            android:layout_marginStart="20dp"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_menu_hari_ini">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-
-                android:background="@drawable/background_radius"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp">
-
-                <!-- ImageView -->
-                <ImageView
-                    android:id="@+id/menu_food"
-                    android:layout_width="220dp"
-                    android:layout_height="220dp"
-                    android:layout_marginStart="0dp"
-                    android:src="@drawable/food_menu"
-                    app:layout_constraintEnd_toStartOf="@+id/mahasiswa"
-                    app:layout_constraintHorizontal_bias="0.123"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <!-- Card untuk Kategori Mahasiswa -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/mahasiswa"
-                    android:layout_width="150dp"
-                    android:layout_height="220dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    android:backgroundTint="@color/mahasiswa"
-                    android:layout_marginStart="10dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:cardElevation="4dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/menu_food"
-                    app:layout_constraintEnd_toStartOf="@+id/pasangan_muda"
-                    app:layout_constraintVertical_chainStyle="packed">
-
-                    <!-- Isi Card Mahasiswa -->
-
-                    <ImageView
-                        android:id="@+id/img_mahasiswa"
-                        android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:contentDescription="Gambar Mahasiswa"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/student" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="85dp"
-                        android:background="#91C789"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Mahasiswa"
-                            android:textColor="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="1 Orang"
-                            android:textColor="@color/white"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <!-- LinearLayout untuk teks di bawah -->
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    app:cardCornerRadius="8dp"
-                    android:background="@color/pasangan_muda"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:cardElevation="4dp"
-                    app:layout_constraintTop_toBottomOf="@+id/mahasiswa"
-                    app:layout_constraintStart_toStartOf="@+id/mahasiswa"
-                    app:layout_constraintEnd_toEndOf="@+id/mahasiswa">
-
-                </androidx.cardview.widget.CardView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navbar"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        />
 
 
+    <!--        &lt;!&ndash; Search View &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/searchView"-->
+<!--            android:layout_width="320dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@drawable/searchview_outline"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="8dp">-->
 
+<!--            <ImageView-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:src="@drawable/ic_search"-->
+<!--                app:tint="#91C789" />-->
 
-                <!-- Card untuk Kategori Pasangan Muda -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/pasangan_muda"
-                    android:layout_width="150dp"
-                    android:layout_height="220dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardBackgroundColor="@color/pasangan_muda"
-                    app:cardElevation="4dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mahasiswa"
-                    app:layout_constraintEnd_toStartOf="@+id/keluarga_kecil"
-                    app:layout_constraintVertical_chainStyle="packed">
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@null"-->
+<!--                android:hint="@string/cari_promo_informasi_atau_produk"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="16sp"-->
+<!--                tools:ignore="TouchTargetSizeCheck" />-->
 
-                    <ImageView
-                        android:id="@+id/img_pasangan"
-                        android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:contentDescription="Gambar pasangan"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/couple" />
+<!--        </LinearLayout>-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="85dp"
-                        android:background="#91C789"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+<!--        &lt;!&ndash; Kategori Tabs &ndash;&gt;-->
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toEndOf="@+id/searchView">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Pasangan Muda"
-                            android:textColor="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+<!--            <ImageView-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:src="@drawable/ic_menu"-->
+<!--                app:tint="@color/black" />-->
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="2 Orang"
-                            android:textColor="@color/white"
-                            android:textSize="16sp" />
+<!--        <HorizontalScrollView-->
+<!--            android:id="@+id/hrz_searchview"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/searchView">-->
 
-                    </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
 
-                </androidx.cardview.widget.CardView>
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_semua_kategori"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/semua_kategori"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="#075F5C" />-->
 
-                <!-- Card untuk Kategori Keluarga Kecil -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/keluarga_kecil"
-                    android:layout_width="150dp"
-                    android:layout_height="220dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardBackgroundColor="@color/keluarga_kecil"
-                    app:cardElevation="4dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/pasangan_muda"
-                    app:layout_constraintEnd_toStartOf="@+id/keluarga_besar"
-                    app:layout_constraintVertical_chainStyle="packed">
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_sayuran"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:text="@string/sayuran"-->
+<!--                    android:textColor="@color/primary"-->
+<!--                    android:textStyle="bold" />-->
 
-                    <ImageView
-                        android:id="@+id/img_keluarga_kecil"
-                        android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:contentDescription="Gambar Keluarga kecil"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/small_family" />
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_daging"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/daging"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="85dp"
-                        android:background="#91C789"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_buah"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/buah"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Keluarga kecil"
-                            android:textColor="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_telur"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/telur"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="3 Orang"
-                            android:textColor="@color/white"
-                            android:textSize="16sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_ayam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/ayam"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                    </LinearLayout>
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_hidangan_laut"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/hidangan_laut"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                </androidx.cardview.widget.CardView>
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_minuman"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="@string/minuman"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                <!-- Card untuk Kategori Keluarga Besar -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/keluarga_besar"
-                    android:layout_width="150dp"
-                    android:layout_height="220dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardBackgroundColor="@color/keluarga_besar"
-                    app:cardElevation="4dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/keluarga_kecil"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed">
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_makanan_ringan"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="@string/makanan_ringan"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textColor="@color/primary" />-->
 
-                    <ImageView
-                        android:id="@+id/img_keluarga_besar"
-                        android:layout_width="match_parent"
-                        android:layout_height="160dp"
-                        android:contentDescription="Gambar keluarga besar"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/big_family" />
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="85dp"
-                        android:background="#91C789"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/categoryRecyclerView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/hrz_searchview"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+<!--            app:spanCount="3"-->
+<!--            tools:listitem="@layout/category_card_item" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Keluarga Besar"
-                            android:textColor="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/txt_menu_hari_ini"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/categoryRecyclerView"-->
+<!--            android:text="@string/menu_masakan_hari_ini"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold" />-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="6 Orang"
-                            android:textColor="@color/white"
-                            android:textSize="16sp" />
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/txt_menu_hari_ini">-->
 
-                    </LinearLayout>
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
 
-                </androidx.cardview.widget.CardView>
+<!--                android:background="@drawable/background_radius"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="16dp"-->
+<!--                android:paddingTop="16dp"-->
+<!--                android:paddingBottom="16dp">-->
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </HorizontalScrollView>
+<!--                &lt;!&ndash; ImageView &ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/menu_food"-->
+<!--                    android:layout_width="220dp"-->
+<!--                    android:layout_height="220dp"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:src="@drawable/food_menu"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/mahasiswa"-->
+<!--                    app:layout_constraintHorizontal_bias="0.123"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                &lt;!&ndash; Card untuk Kategori Mahasiswa &ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/mahasiswa"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="220dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    android:backgroundTint="@color/mahasiswa"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    app:cardBackgroundColor="#FFFFFF"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/menu_food"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/pasangan_muda"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed">-->
+
+<!--                    &lt;!&ndash; Isi Card Mahasiswa &ndash;&gt;-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/img_mahasiswa"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="160dp"-->
+<!--                        android:contentDescription="Gambar Mahasiswa"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/student" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="85dp"-->
+<!--                        android:background="#91C789"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="8dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Mahasiswa"-->
+<!--                            android:textColor="#FFFFFF"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1 Orang"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                &lt;!&ndash; LinearLayout untuk teks di bawah &ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    android:background="@color/pasangan_muda"-->
+<!--                    app:cardBackgroundColor="#FFFFFF"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/mahasiswa"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/mahasiswa"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/mahasiswa">-->
+
+<!--                </androidx.cardview.widget.CardView>-->
 
 
 
-    </RelativeLayout>
-</ScrollView>
+
+<!--                &lt;!&ndash; Card untuk Kategori Pasangan Muda &ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/pasangan_muda"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="220dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardBackgroundColor="@color/pasangan_muda"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/mahasiswa"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/keluarga_kecil"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/img_pasangan"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="160dp"-->
+<!--                        android:contentDescription="Gambar pasangan"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/couple" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="85dp"-->
+<!--                        android:background="#91C789"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="8dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Pasangan Muda"-->
+<!--                            android:textColor="#FFFFFF"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="2 Orang"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                &lt;!&ndash; Card untuk Kategori Keluarga Kecil &ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/keluarga_kecil"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="220dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardBackgroundColor="@color/keluarga_kecil"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/pasangan_muda"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/keluarga_besar"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/img_keluarga_kecil"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="160dp"-->
+<!--                        android:contentDescription="Gambar Keluarga kecil"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/small_family" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="85dp"-->
+<!--                        android:background="#91C789"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="8dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Keluarga kecil"-->
+<!--                            android:textColor="#FFFFFF"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="3 Orang"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                &lt;!&ndash; Card untuk Kategori Keluarga Besar &ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/keluarga_besar"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="220dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardBackgroundColor="@color/keluarga_besar"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/keluarga_kecil"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/img_keluarga_besar"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="160dp"-->
+<!--                        android:contentDescription="Gambar keluarga besar"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/big_family" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="85dp"-->
+<!--                        android:background="#91C789"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="8dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Keluarga Besar"-->
+<!--                            android:textColor="#FFFFFF"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="6 Orang"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </HorizontalScrollView>-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--</ScrollView>-->
