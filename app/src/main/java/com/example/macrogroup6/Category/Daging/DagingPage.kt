@@ -9,10 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.BuahCategoryAdapter
 import com.example.macrogroup6.Adapter.DagingCategoryAdapter
+import com.example.macrogroup6.Category.Ayam.AyamPage
 import com.example.macrogroup6.Category.Buah.BuahCardItem
 import com.example.macrogroup6.Category.Buah.BuahPage
 import com.example.macrogroup6.Category.CategoryPage
 import com.example.macrogroup6.Category.Sayuran.SayuranPage
+import com.example.macrogroup6.Category.Telur.TelurPage
 import com.example.macrogroup6.R
 
 class DagingPage : AppCompatActivity() {
@@ -27,8 +29,8 @@ class DagingPage : AppCompatActivity() {
         val textViewSemuaKategori = findViewById<TextView>(R.id.tv_semua_kategori)
         val textViewSayuran= findViewById<TextView>(R.id.tv_sayuran)
         val textViewBuah= findViewById<TextView>(R.id.tv_buah)
-        val textViewTelur= findViewById<TextView>(R.id.tv_buah)
-        val textViewAyam= findViewById<TextView>(R.id.tv_buah)
+        val textViewTelur= findViewById<TextView>(R.id.tv_telur)
+        val textViewAyam= findViewById<TextView>(R.id.tv_ayam)
 
 
         val dagingList = mutableListOf(
@@ -73,5 +75,16 @@ class DagingPage : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
+        textViewTelur.setOnClickListener{
+            val intent = Intent(this, TelurPage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+        textViewAyam.setOnClickListener{
+            val intent = Intent(this, AyamPage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
     }
 }
