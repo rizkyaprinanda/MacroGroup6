@@ -64,6 +64,7 @@
             android:layout_below="@id/searchView">
 
             <LinearLayout
+                android:id="@+id/scroll_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -152,28 +153,36 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewSayuran"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/hrz_searchview"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="16dp"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
-            tools:listitem="@layout/sayuran_card_item" />
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSayuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toTopOf="@id/container"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spanCount="2"
+                tools:listitem="@layout/sayuran_card_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/txt_menu_hari_ini"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/recyclerViewSayuran"
+            android:layout_below="@+id/container"
             android:text="@string/menu_masakan_hari_ini"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
             android:textSize="20sp"
             android:textStyle="bold" />
 

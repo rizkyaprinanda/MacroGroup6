@@ -2,11 +2,14 @@ package com.example.macrogroup6
 
 import android.content.Intent
 import android.os.Bundle
+
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.macrogroup6.Adapter.Horizontal_RecyclerView
 import com.example.macrogroup6.databinding.ActivityDetailProdukBinding
+
+
 
 class DetailProdukActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -16,10 +19,10 @@ class DetailProdukActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityDetailProdukBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_produk)
-
         binding = ActivityDetailProdukBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

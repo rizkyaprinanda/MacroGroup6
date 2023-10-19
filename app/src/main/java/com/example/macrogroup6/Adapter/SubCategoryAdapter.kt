@@ -51,4 +51,6 @@ class SubCategoryAdapter(private val context: Context, private val sayuranList: 
     override fun getItemCount(): Int {
         return sayuranList.size
     }
+
+
 }

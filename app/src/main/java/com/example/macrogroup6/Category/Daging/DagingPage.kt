@@ -23,9 +23,10 @@ class DagingPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daging_page)
 
-        val textViewSemuaKategori = findViewById<TextView>(R.id.tv_semua_kategori)
-        val textViewSayuran = findViewById<TextView>(R.id.tv_sayuran)
-        val textViewBuah = findViewById<TextView>(R.id.tv_buah)
+        val textViewSemuaKategori = findViewById<TextView>(R.id.tx_semua_kategori)
+        val textViewSayuran = findViewById<TextView>(R.id.tx_sayuran)
+        val textViewBuah = findViewById<TextView>(R.id.tx_buah)
+
 
         val dagingList = mutableListOf(
             DagingCardItem("daging sapi tumis", R.drawable.daging_sapi_tumis),

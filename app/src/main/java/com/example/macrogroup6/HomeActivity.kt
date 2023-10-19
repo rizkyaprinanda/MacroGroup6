@@ -37,7 +37,10 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.container, fragment)
         fragmentTransaction.commit()
+
     }
+
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.home -> {
